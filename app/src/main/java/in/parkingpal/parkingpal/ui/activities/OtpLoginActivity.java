@@ -13,7 +13,7 @@ import android.widget.TextView;
 
 import in.parkingpal.parkingpal.R;
 
-
+//TODO: name it as OtpActivity
 public class OtpLoginActivity extends AppCompatActivity {
 
     EditText et1, et2, et3, et4;

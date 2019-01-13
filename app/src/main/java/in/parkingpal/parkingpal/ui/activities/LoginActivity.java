@@ -32,13 +32,15 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        mslideViewPager = (ViewPager) findViewById(R.id.slideViewPager);
-        mDotLayout = (LinearLayout) findViewById(R.id.dotsLayout);
+        mslideViewPager = findViewById(R.id.viewPager);
+        mDotLayout = findViewById(R.id.dotsLayout);
+
         sliderAdapter = new SliderAdapter(this);
         mslideViewPager.setAdapter(sliderAdapter);
-        addDotsIndicator(0);
-        mslideViewPager.addOnPageChangeListener(viewListener);
 
+        addDotsIndicator(0);
+
+        mslideViewPager.addOnPageChangeListener(viewListener);
     }
 
     public void addDotsIndicator(int position) {
@@ -78,8 +80,18 @@ public class LoginActivity extends AppCompatActivity {
 
     public void getOtp(View view) {
         Intent intent = new Intent(LoginActivity.this, OtpLoginActivity.class);
+        //TODO: Variable name should be edtMobile or mobileEditText
         EditText editText = findViewById(R.id.editText);
+        //TODO: Variable name should be mobile
         String message = editText.getText().toString();
+        //TODO: add validation of mobile number
+
+        /*
+            TODO: create an interface called as constants and declare all your constants as string in that interface
+            so that you can refer that in any activity
+            I have already created constant file in utils package with constant INTENT_EXTRA_MOBILE
+            use that constant instead of EXTRA_MESSAGE
+         */
         intent.putExtra(EXTRA_MESSAGE, message);
         startActivity(intent);
     }

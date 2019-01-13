@@ -2,8 +2,8 @@
     <string name="app_name">Parking Pal</string>
     <string name ="txtView_otp2">We will auto verify the OTP sent to your number.</string>
     <string name ="txtView_otp1">Please Wait.</string>
-    <string name="txt_num">+91</string>
-    <string name="txt_num1">80123456789</string>
+    <string name="text_country_code">+91</string>
+    <string name="hint_enter_mobile">Enter mobile number</string>
     <string name="txt_continue">Continue</string>
     <string name="txt_resend_otp">Rsend OTP?</string>
     <string name="txt_number_change">Change the Number?</string>
